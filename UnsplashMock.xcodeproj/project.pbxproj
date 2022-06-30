@@ -7,15 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		86922E8C286E2A2A00E07311 /* CollectionViewImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86922E8B286E2A2A00E07311 /* CollectionViewImageCell.swift */; };
 		86E8F0FF28690B9B00F4EEA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E8F0FE28690B9B00F4EEA1 /* AppDelegate.swift */; };
 		86E8F10128690B9B00F4EEA1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E8F10028690B9B00F4EEA1 /* SceneDelegate.swift */; };
 		86E8F10328690B9B00F4EEA1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E8F10228690B9B00F4EEA1 /* ViewController.swift */; };
 		86E8F10628690B9B00F4EEA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E8F10428690B9B00F4EEA1 /* Main.storyboard */; };
 		86E8F10828690B9F00F4EEA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86E8F10728690B9F00F4EEA1 /* Assets.xcassets */; };
 		86E8F10B28690B9F00F4EEA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E8F10928690B9F00F4EEA1 /* LaunchScreen.storyboard */; };
+		86E8F11428690BEB00F4EEA1 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E8F11328690BEB00F4EEA1 /* TabBarController.swift */; };
+		86E8F11728690D0400F4EEA1 /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E8F11628690D0400F4EEA1 /* PhotosCollectionViewController.swift */; };
+		86E8F119286914E600F4EEA1 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E8F118286914E600F4EEA1 /* FavouritesViewController.swift */; };
+		86E8F11B2869246D00F4EEA1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E8F11A2869246D00F4EEA1 /* NetworkManager.swift */; };
+		86E8F11E2869FBD800F4EEA1 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E8F11D2869FBD700F4EEA1 /* NetworkDataFetcher.swift */; };
+		86E8F1202869FC4F00F4EEA1 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E8F11F2869FC4F00F4EEA1 /* PhotoModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		86922E8B286E2A2A00E07311 /* CollectionViewImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewImageCell.swift; sourceTree = "<group>"; };
 		86E8F0FB28690B9B00F4EEA1 /* UnsplashMock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnsplashMock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86E8F0FE28690B9B00F4EEA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86E8F10028690B9B00F4EEA1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +32,12 @@
 		86E8F10728690B9F00F4EEA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86E8F10A28690B9F00F4EEA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		86E8F10C28690B9F00F4EEA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86E8F11328690BEB00F4EEA1 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		86E8F11628690D0400F4EEA1 /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
+		86E8F118286914E600F4EEA1 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
+		86E8F11A2869246D00F4EEA1 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		86E8F11D2869FBD700F4EEA1 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
+		86E8F11F2869FC4F00F4EEA1 /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +70,54 @@
 		86E8F0FD28690B9B00F4EEA1 /* UnsplashMock */ = {
 			isa = PBXGroup;
 			children = (
-				86E8F0FE28690B9B00F4EEA1 /* AppDelegate.swift */,
-				86E8F10028690B9B00F4EEA1 /* SceneDelegate.swift */,
-				86E8F10228690B9B00F4EEA1 /* ViewController.swift */,
+				86E8F11C2869C3D700F4EEA1 /* DataManagers */,
+				86E8F11228690BBC00F4EEA1 /* UIApplication */,
+				86E8F1212869FC5C00F4EEA1 /* Model */,
+				86E8F11528690C1400F4EEA1 /* Controllers */,
 				86E8F10428690B9B00F4EEA1 /* Main.storyboard */,
 				86E8F10728690B9F00F4EEA1 /* Assets.xcassets */,
 				86E8F10928690B9F00F4EEA1 /* LaunchScreen.storyboard */,
 				86E8F10C28690B9F00F4EEA1 /* Info.plist */,
 			);
 			path = UnsplashMock;
+			sourceTree = "<group>";
+		};
+		86E8F11228690BBC00F4EEA1 /* UIApplication */ = {
+			isa = PBXGroup;
+			children = (
+				86E8F0FE28690B9B00F4EEA1 /* AppDelegate.swift */,
+				86E8F10028690B9B00F4EEA1 /* SceneDelegate.swift */,
+			);
+			path = UIApplication;
+			sourceTree = "<group>";
+		};
+		86E8F11528690C1400F4EEA1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				86E8F10228690B9B00F4EEA1 /* ViewController.swift */,
+				86E8F11328690BEB00F4EEA1 /* TabBarController.swift */,
+				86E8F11628690D0400F4EEA1 /* PhotosCollectionViewController.swift */,
+				86E8F118286914E600F4EEA1 /* FavouritesViewController.swift */,
+				86922E8B286E2A2A00E07311 /* CollectionViewImageCell.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		86E8F11C2869C3D700F4EEA1 /* DataManagers */ = {
+			isa = PBXGroup;
+			children = (
+				86E8F11A2869246D00F4EEA1 /* NetworkManager.swift */,
+				86E8F11D2869FBD700F4EEA1 /* NetworkDataFetcher.swift */,
+			);
+			path = DataManagers;
+			sourceTree = "<group>";
+		};
+		86E8F1212869FC5C00F4EEA1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				86E8F11F2869FC4F00F4EEA1 /* PhotoModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +190,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86E8F11E2869FBD800F4EEA1 /* NetworkDataFetcher.swift in Sources */,
+				86E8F119286914E600F4EEA1 /* FavouritesViewController.swift in Sources */,
 				86E8F10328690B9B00F4EEA1 /* ViewController.swift in Sources */,
+				86E8F11428690BEB00F4EEA1 /* TabBarController.swift in Sources */,
+				86922E8C286E2A2A00E07311 /* CollectionViewImageCell.swift in Sources */,
+				86E8F11B2869246D00F4EEA1 /* NetworkManager.swift in Sources */,
 				86E8F0FF28690B9B00F4EEA1 /* AppDelegate.swift in Sources */,
+				86E8F11728690D0400F4EEA1 /* PhotosCollectionViewController.swift in Sources */,
 				86E8F10128690B9B00F4EEA1 /* SceneDelegate.swift in Sources */,
+				86E8F1202869FC4F00F4EEA1 /* PhotoModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +348,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = UnsplashMock/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -295,7 +356,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.vladkarmalov.unsplashmock15252424.UnsplashMock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -306,6 +367,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = UnsplashMock/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,7 +375,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.vladkarmalov.unsplashmock15252424.UnsplashMock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
