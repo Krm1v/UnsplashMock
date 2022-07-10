@@ -13,7 +13,7 @@ class PhotosCollectionViewController: UICollectionViewController {
     
     let networkDataFetcher = NetworkDataFetcher()
     private var timer: Timer?
-    var photos = [PhotoModel]()
+    private var photos = [UnsplashPhoto]()
     
     private lazy var addBarButtonItem: UIBarButtonItem = {
         let addBarButton = UIBarButtonItem(barButtonSystemItem: .add,
@@ -54,6 +54,7 @@ class PhotosCollectionViewController: UICollectionViewController {
     
     private func setupCollectionView() {
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        collectionView.register(CollectionViewImageCell.self, forCellWithReuseIdentifier: CollectionViewImageCell.reuseID)
     }
     
     private func setupNavBar() {
@@ -85,12 +86,12 @@ class PhotosCollectionViewController: UICollectionViewController {
 extension PhotosCollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 10
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        cell.backgroundColor = .gray
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewImageCell.reuseID , for: indexPath) as! CollectionViewImageCell
+        
         
         return cell
     }
@@ -103,11 +104,12 @@ extension PhotosCollectionViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
         timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false, block: { (_) in
-            self.networkDataFetcher.fetchImages(searchWord: searchText) { (searchResults) in
-                searchResults?.results.map { (photo) in
+            self.networkDataFetcher.fetchImages(searchWord: searchText) { [weak self] (searchResults) in
+                searchResults?.results.map({ (photo) in
                     print(photo.urls["small"])
-                }
+                })
             }
         })
     }
 }
+

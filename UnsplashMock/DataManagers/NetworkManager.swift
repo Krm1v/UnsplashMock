@@ -24,7 +24,7 @@ class NetworkManager {
     private func prepareHeader() -> [String: String]? {
         
         var headers = [String: String]()
-        headers["Authorization"] = "Client_ID xgtXHmCm36C9TXhrWeSHOcnKa6MwC6hEW2j2lt2KdM4"
+        headers["Authorization"] = "client_id=xgtXHmCm36C9TXhrWeSHOcnKa6MwC6hEW2j2lt2KdM4"
         return headers
     }
     
@@ -33,6 +33,7 @@ class NetworkManager {
         params["query"] = searchWord
         params["page"] = String(1)
         params["per_page"] = String(30)
+        params["client_id"] = "xgtXHmCm36C9TXhrWeSHOcnKa6MwC6hEW2j2lt2KdM4"
         return params
     }
     

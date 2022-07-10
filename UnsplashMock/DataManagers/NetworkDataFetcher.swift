@@ -22,11 +22,12 @@ class NetworkDataFetcher {
         }
     }
     
-    func decodeJSON<T: Codable>(type: T.Type, from: Data?) -> T? {
+    func decodeJSON<T: Decodable>(type: T.Type, from: Data?) -> T? {
         let decoder = JSONDecoder()
         guard let data = from else { return nil }
         
         do {
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
             let objects = try decoder.decode(type.self, from: data)
             return objects
         } catch let jsonError {
@@ -34,5 +35,4 @@ class NetworkDataFetcher {
             return nil
         }
     }
-    
 }

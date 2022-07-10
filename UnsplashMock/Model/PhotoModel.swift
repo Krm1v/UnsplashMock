@@ -11,7 +11,6 @@ struct PhotoModel: Codable {
 
     let total: Int
     let results: [UnsplashPhoto]
-    
 }
 
 struct UnsplashPhoto: Codable {
@@ -19,7 +18,6 @@ struct UnsplashPhoto: Codable {
     let width: Int
     let height: Int
     let urls: [URLVersion.RawValue:String]
-    //    let user: [User]
     
     enum URLVersion: String {
         case raw
@@ -29,7 +27,3 @@ struct UnsplashPhoto: Codable {
         case thumb
     }
 }
-
-//struct User: Codable {
-//    let name: String
-//}

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class CollectionViewImageCell: UICollectionViewCell {
     
@@ -19,6 +20,30 @@ class CollectionViewImageCell: UICollectionViewCell {
         return imageView
     }()
     
+    var unsplashPhoto: UnsplashPhoto! {
+        didSet {
+            let photoURL = unsplashPhoto.urls["regular"]
+            guard let imageURL = photoURL, let url = URL(string: imageURL) else { return }
+            photoImageView.sd_setImage(with: url)
+        }
+    }
+    
+    override var isSelected: Bool {
+        didSet {
+            updateSelectedState()
+        }
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        photoImageView.image = nil
+    }
+    
+    private func updateSelectedState() {
+        photoImageView.alpha = isSelected ? 0.7 : 1
+        checkmark.alpha = isSelected ? 1 : 0
+    }
+    
     private let photoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -30,6 +55,17 @@ class CollectionViewImageCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        updateSelectedState()
+        setupPhotoImageView()
+        setupCheckMark()
+    }
+    
+    private func setupCheckMark() {
+        addSubview(checkmark)
+        checkmark.trailingAnchor.constraint(equalTo: photoImageView.trailingAnchor,
+                                            constant: -8).isActive = true
+        checkmark.bottomAnchor.constraint(equalTo: photoImageView.bottomAnchor,
+                                          constant: -8).isActive = true
     }
     
     private func setupPhotoImageView() {
