@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		868DD633287B774500CF6743 /* PhotoVC + Extension CollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868DD632287B774500CF6743 /* PhotoVC + Extension CollectionViewDataSource.swift */; };
+		868DD635287B77D800CF6743 /* PhotoVC + Extension UISearchBar Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868DD634287B77D800CF6743 /* PhotoVC + Extension UISearchBar Delegate.swift */; };
+		868DD637287B789D00CF6743 /* PhotoVC + Extension CollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868DD636287B789D00CF6743 /* PhotoVC + Extension CollectionViewDelegate.swift */; };
+		868DD639287B7A5B00CF6743 /* PhotoVC + Extension CollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868DD638287B7A5B00CF6743 /* PhotoVC + Extension CollectionViewFlowLayout.swift */; };
 		86922E8C286E2A2A00E07311 /* CollectionViewImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86922E8B286E2A2A00E07311 /* CollectionViewImageCell.swift */; };
 		86E8F0FF28690B9B00F4EEA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E8F0FE28690B9B00F4EEA1 /* AppDelegate.swift */; };
 		86E8F10128690B9B00F4EEA1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E8F10028690B9B00F4EEA1 /* SceneDelegate.swift */; };
-		86E8F10328690B9B00F4EEA1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E8F10228690B9B00F4EEA1 /* ViewController.swift */; };
 		86E8F10628690B9B00F4EEA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E8F10428690B9B00F4EEA1 /* Main.storyboard */; };
 		86E8F10828690B9F00F4EEA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86E8F10728690B9F00F4EEA1 /* Assets.xcassets */; };
 		86E8F10B28690B9F00F4EEA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E8F10928690B9F00F4EEA1 /* LaunchScreen.storyboard */; };
@@ -24,11 +27,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		868DD632287B774500CF6743 /* PhotoVC + Extension CollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotoVC + Extension CollectionViewDataSource.swift"; sourceTree = "<group>"; };
+		868DD634287B77D800CF6743 /* PhotoVC + Extension UISearchBar Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotoVC + Extension UISearchBar Delegate.swift"; sourceTree = "<group>"; };
+		868DD636287B789D00CF6743 /* PhotoVC + Extension CollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotoVC + Extension CollectionViewDelegate.swift"; sourceTree = "<group>"; };
+		868DD638287B7A5B00CF6743 /* PhotoVC + Extension CollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotoVC + Extension CollectionViewFlowLayout.swift"; sourceTree = "<group>"; };
 		86922E8B286E2A2A00E07311 /* CollectionViewImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewImageCell.swift; sourceTree = "<group>"; };
 		86E8F0FB28690B9B00F4EEA1 /* UnsplashMock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnsplashMock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86E8F0FE28690B9B00F4EEA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86E8F10028690B9B00F4EEA1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		86E8F10228690B9B00F4EEA1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		86E8F10528690B9B00F4EEA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		86E8F10728690B9F00F4EEA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86E8F10A28690B9F00F4EEA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -65,6 +71,18 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		868DD631287B745400CF6743 /* PhotosVC */ = {
+			isa = PBXGroup;
+			children = (
+				86E8F11628690D0400F4EEA1 /* PhotosCollectionViewController.swift */,
+				868DD632287B774500CF6743 /* PhotoVC + Extension CollectionViewDataSource.swift */,
+				868DD634287B77D800CF6743 /* PhotoVC + Extension UISearchBar Delegate.swift */,
+				868DD636287B789D00CF6743 /* PhotoVC + Extension CollectionViewDelegate.swift */,
+				868DD638287B7A5B00CF6743 /* PhotoVC + Extension CollectionViewFlowLayout.swift */,
+			);
+			path = PhotosVC;
+			sourceTree = "<group>";
+		};
 		86E8F0F228690B9B00F4EEA1 = {
 			isa = PBXGroup;
 			children = (
@@ -86,8 +104,8 @@
 		86E8F0FD28690B9B00F4EEA1 /* UnsplashMock */ = {
 			isa = PBXGroup;
 			children = (
-				86E8F11C2869C3D700F4EEA1 /* DataManagers */,
 				86E8F11228690BBC00F4EEA1 /* UIApplication */,
+				86E8F11C2869C3D700F4EEA1 /* DataManagers */,
 				86E8F1212869FC5C00F4EEA1 /* Model */,
 				86E8F11528690C1400F4EEA1 /* Controllers */,
 				86E8F10428690B9B00F4EEA1 /* Main.storyboard */,
@@ -110,9 +128,8 @@
 		86E8F11528690C1400F4EEA1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				86E8F10228690B9B00F4EEA1 /* ViewController.swift */,
 				86E8F11328690BEB00F4EEA1 /* TabBarController.swift */,
-				86E8F11628690D0400F4EEA1 /* PhotosCollectionViewController.swift */,
+				868DD631287B745400CF6743 /* PhotosVC */,
 				86E8F118286914E600F4EEA1 /* FavouritesViewController.swift */,
 				86922E8B286E2A2A00E07311 /* CollectionViewImageCell.swift */,
 			);
@@ -258,11 +275,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				868DD639287B7A5B00CF6743 /* PhotoVC + Extension CollectionViewFlowLayout.swift in Sources */,
 				86E8F11E2869FBD800F4EEA1 /* NetworkDataFetcher.swift in Sources */,
+				868DD635287B77D800CF6743 /* PhotoVC + Extension UISearchBar Delegate.swift in Sources */,
 				86E8F119286914E600F4EEA1 /* FavouritesViewController.swift in Sources */,
-				86E8F10328690B9B00F4EEA1 /* ViewController.swift in Sources */,
 				86E8F11428690BEB00F4EEA1 /* TabBarController.swift in Sources */,
+				868DD637287B789D00CF6743 /* PhotoVC + Extension CollectionViewDelegate.swift in Sources */,
 				86922E8C286E2A2A00E07311 /* CollectionViewImageCell.swift in Sources */,
+				868DD633287B774500CF6743 /* PhotoVC + Extension CollectionViewDataSource.swift in Sources */,
 				86E8F11B2869246D00F4EEA1 /* NetworkManager.swift in Sources */,
 				86E8F0FF28690B9B00F4EEA1 /* AppDelegate.swift in Sources */,
 				86E8F11728690D0400F4EEA1 /* PhotosCollectionViewController.swift in Sources */,

@@ -8,7 +8,7 @@
 import Foundation
 
 struct PhotoModel: Codable {
-
+    
     let total: Int
     let results: [UnsplashPhoto]
 }

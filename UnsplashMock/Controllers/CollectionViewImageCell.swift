@@ -13,14 +13,17 @@ class CollectionViewImageCell: UICollectionViewCell {
     static let reuseID = "PhotosCell"
     
     private let checkmark: UIImageView = {
+        
         let image = UIImage(named: "checkmark2")
         let imageView = UIImageView(image: image)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.alpha = 0
+        
         return imageView
     }()
     
     var unsplashPhoto: UnsplashPhoto! {
+        
         didSet {
             let photoURL = unsplashPhoto.urls["regular"]
             guard let imageURL = photoURL, let url = URL(string: imageURL) else { return }
@@ -29,6 +32,7 @@ class CollectionViewImageCell: UICollectionViewCell {
     }
     
     override var isSelected: Bool {
+        
         didSet {
             updateSelectedState()
         }
@@ -40,11 +44,13 @@ class CollectionViewImageCell: UICollectionViewCell {
     }
     
     private func updateSelectedState() {
+        
         photoImageView.alpha = isSelected ? 0.7 : 1
         checkmark.alpha = isSelected ? 1 : 0
     }
     
     let photoImageView: UIImageView = {
+        
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleToFill
@@ -52,14 +58,8 @@ class CollectionViewImageCell: UICollectionViewCell {
         return imageView
     }()
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        updateSelectedState()
-        setupPhotoImageView()
-        setupCheckMark()
-    }
-    
     private func setupCheckMark() {
+        
         addSubview(checkmark)
         checkmark.trailingAnchor.constraint(equalTo: photoImageView.trailingAnchor,
                                             constant: -8).isActive = true
@@ -68,16 +68,23 @@ class CollectionViewImageCell: UICollectionViewCell {
     }
     
     private func setupPhotoImageView() {
-        addSubview(photoImageView)
         
+        addSubview(photoImageView)
         photoImageView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         photoImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
         photoImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         photoImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
     }
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        updateSelectedState()
+        setupPhotoImageView()
+        setupCheckMark()
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }

@@ -9,9 +9,11 @@ import Foundation
 
 class NetworkDataFetcher {
     
-    var networkManager = NetworkManager()
+    private var networkManager = NetworkManager()
     
-    func fetchImages(searchWord: String, completion: @escaping (PhotoModel?) -> ()) {
+    func fetchImages(searchWord: String,
+                     completion: @escaping (PhotoModel?) -> ()) {
+        
         networkManager.fetchRequest(searchWord: searchWord) { data, error in
             if let error = error {
                 print("Error received requesting data: \(error.localizedDescription)")
@@ -23,9 +25,9 @@ class NetworkDataFetcher {
     }
     
     func decodeJSON<T: Decodable>(type: T.Type, from: Data?) -> T? {
+        
         let decoder = JSONDecoder()
         guard let data = from else { return nil }
-        
         do {
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             let objects = try decoder.decode(type.self, from: data)

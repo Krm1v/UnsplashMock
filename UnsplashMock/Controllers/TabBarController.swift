@@ -9,11 +9,13 @@ import UIKit
 
 class TabBarController: UITabBarController {
     
+    //MARK: - UIView lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let photosVC = PhotosCollectionViewController(collectionViewLayout: UICollectionViewFlowLayout())
-        let favouritesVC = FavouritesViewController(style: .plain)
+        let favouritesVC = FavouritesViewController(collectionViewLayout: UICollectionViewFlowLayout())
         
         
         viewControllers = [
@@ -25,9 +27,12 @@ class TabBarController: UITabBarController {
         ]
     }
     
+    //MARK: - Private methods
+    
     private func createNavigationViewController(rootViewController: UIViewController,
                                                 title: String,
                                                 image: UIImage) -> UIViewController {
+        
         let navigationVC = UINavigationController(rootViewController: rootViewController)
         navigationVC.tabBarItem.title = title
         navigationVC.tabBarItem.image = image
@@ -35,8 +40,8 @@ class TabBarController: UITabBarController {
         return navigationVC
     }
     
-    // Fix return later
     private func setImage(imageName: String) -> UIImage {
+        
         let image = UIImage(systemName: "\(imageName)")
         return image ?? UIImage(imageLiteralResourceName: "")
     }
