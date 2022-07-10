@@ -13,7 +13,7 @@ class CollectionViewImageCell: UICollectionViewCell {
     static let reuseID = "PhotosCell"
     
     private let checkmark: UIImageView = {
-        let image = UIImage(named: "checkmark")
+        let image = UIImage(named: "checkmark2")
         let imageView = UIImageView(image: image)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.alpha = 0
@@ -44,11 +44,10 @@ class CollectionViewImageCell: UICollectionViewCell {
         checkmark.alpha = isSelected ? 1 : 0
     }
     
-    private let photoImageView: UIImageView = {
+    let photoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView .backgroundColor = .blue
-        imageView.contentMode = .scaleAspectFill
+        imageView.contentMode = .scaleToFill
         
         return imageView
     }()
