@@ -11,6 +11,7 @@
 		868DD635287B77D800CF6743 /* PhotoVC + Extension UISearchBar Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868DD634287B77D800CF6743 /* PhotoVC + Extension UISearchBar Delegate.swift */; };
 		868DD637287B789D00CF6743 /* PhotoVC + Extension CollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868DD636287B789D00CF6743 /* PhotoVC + Extension CollectionViewDelegate.swift */; };
 		868DD639287B7A5B00CF6743 /* PhotoVC + Extension CollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868DD638287B7A5B00CF6743 /* PhotoVC + Extension CollectionViewFlowLayout.swift */; };
+		868DD63C287C6A4600CF6743 /* FavouritesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868DD63B287C6A4600CF6743 /* FavouritesCollectionViewCell.swift */; };
 		86922E8C286E2A2A00E07311 /* CollectionViewImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86922E8B286E2A2A00E07311 /* CollectionViewImageCell.swift */; };
 		86E8F0FF28690B9B00F4EEA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E8F0FE28690B9B00F4EEA1 /* AppDelegate.swift */; };
 		86E8F10128690B9B00F4EEA1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E8F10028690B9B00F4EEA1 /* SceneDelegate.swift */; };
@@ -31,6 +32,7 @@
 		868DD634287B77D800CF6743 /* PhotoVC + Extension UISearchBar Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotoVC + Extension UISearchBar Delegate.swift"; sourceTree = "<group>"; };
 		868DD636287B789D00CF6743 /* PhotoVC + Extension CollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotoVC + Extension CollectionViewDelegate.swift"; sourceTree = "<group>"; };
 		868DD638287B7A5B00CF6743 /* PhotoVC + Extension CollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotoVC + Extension CollectionViewFlowLayout.swift"; sourceTree = "<group>"; };
+		868DD63B287C6A4600CF6743 /* FavouritesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesCollectionViewCell.swift; sourceTree = "<group>"; };
 		86922E8B286E2A2A00E07311 /* CollectionViewImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewImageCell.swift; sourceTree = "<group>"; };
 		86E8F0FB28690B9B00F4EEA1 /* UnsplashMock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnsplashMock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86E8F0FE28690B9B00F4EEA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,14 @@
 			path = PhotosVC;
 			sourceTree = "<group>";
 		};
+		868DD63A287C66DF00CF6743 /* FavouritesVC */ = {
+			isa = PBXGroup;
+			children = (
+				86E8F118286914E600F4EEA1 /* FavouritesViewController.swift */,
+			);
+			path = FavouritesVC;
+			sourceTree = "<group>";
+		};
 		86E8F0F228690B9B00F4EEA1 = {
 			isa = PBXGroup;
 			children = (
@@ -130,7 +140,8 @@
 			children = (
 				86E8F11328690BEB00F4EEA1 /* TabBarController.swift */,
 				868DD631287B745400CF6743 /* PhotosVC */,
-				86E8F118286914E600F4EEA1 /* FavouritesViewController.swift */,
+				868DD63A287C66DF00CF6743 /* FavouritesVC */,
+				868DD63B287C6A4600CF6743 /* FavouritesCollectionViewCell.swift */,
 				86922E8B286E2A2A00E07311 /* CollectionViewImageCell.swift */,
 			);
 			path = Controllers;
@@ -275,6 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				868DD63C287C6A4600CF6743 /* FavouritesCollectionViewCell.swift in Sources */,
 				868DD639287B7A5B00CF6743 /* PhotoVC + Extension CollectionViewFlowLayout.swift in Sources */,
 				86E8F11E2869FBD800F4EEA1 /* NetworkDataFetcher.swift in Sources */,
 				868DD635287B77D800CF6743 /* PhotoVC + Extension UISearchBar Delegate.swift in Sources */,

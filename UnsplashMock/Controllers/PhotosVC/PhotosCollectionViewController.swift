@@ -124,8 +124,33 @@ class PhotosCollectionViewController: UICollectionViewController {
     //MARK: - Buttons methods
     
     @objc private func addButtonPressed() {
-        // some code soon
-    }
+        
+        let selectedPhotos = collectionView.indexPathsForSelectedItems?.reduce([], { (photosSelected, indexPath) -> [UnsplashPhoto] in
+            var mutablePhotos = photosSelected
+            let photo = photos[indexPath.item]
+            mutablePhotos.append(photo)
+            return mutablePhotos
+        })
+        
+        let alert = UIAlertController(title: "",
+                                      message: "\(selectedPhotos?.count ?? 0) photos will be added in your favourites", preferredStyle: .alert)
+        let addAction = UIAlertAction(title: "Add photos",
+                                      style: .default) { (action) in
+            let tabBar = self.tabBarController as! TabBarController
+            let navVC = tabBar.viewControllers?[1] as! UINavigationController
+            let favVC = navVC.topViewController as! FavouritesViewController
+
+            favVC.photos.append(contentsOf: selectedPhotos ?? [])
+            favVC.collectionView.reloadData()
+            self.refresh()
+        }
+        let cancelAction = UIAlertAction(title: "Cancel",
+                                         style: .cancel) { (action) in
+        }
+        alert.addAction(addAction)
+        alert.addAction(cancelAction)
+        present(alert, animated: true)
+        }
     
     @objc private func actionButtonPressed(_ sender: UIBarButtonItem) {
         

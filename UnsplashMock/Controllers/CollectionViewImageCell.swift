@@ -13,12 +13,12 @@ class CollectionViewImageCell: UICollectionViewCell {
     static let reuseID = "PhotosCell"
     
     private let checkmark: UIImageView = {
-        
+
         let image = UIImage(named: "checkmark2")
         let imageView = UIImageView(image: image)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.alpha = 0
-        
+
         return imageView
     }()
     
@@ -30,6 +30,15 @@ class CollectionViewImageCell: UICollectionViewCell {
             photoImageView.sd_setImage(with: url)
         }
     }
+    
+    let photoImageView: UIImageView = {
+        
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleToFill
+        
+        return imageView
+    }()
     
     override var isSelected: Bool {
         
@@ -48,15 +57,6 @@ class CollectionViewImageCell: UICollectionViewCell {
         photoImageView.alpha = isSelected ? 0.7 : 1
         checkmark.alpha = isSelected ? 1 : 0
     }
-    
-    let photoImageView: UIImageView = {
-        
-        let imageView = UIImageView()
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = .scaleToFill
-        
-        return imageView
-    }()
     
     private func setupCheckMark() {
         

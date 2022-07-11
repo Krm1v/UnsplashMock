@@ -17,7 +17,6 @@ class TabBarController: UITabBarController {
         let photosVC = PhotosCollectionViewController(collectionViewLayout: UICollectionViewFlowLayout())
         let favouritesVC = FavouritesViewController(collectionViewLayout: UICollectionViewFlowLayout())
         
-        
         viewControllers = [
             createNavigationViewController(rootViewController: photosVC,
                                            title: "", image: setImage(imageName: "photo.fill")),
