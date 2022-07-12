@@ -16,6 +16,13 @@ class FavouritesViewController: UICollectionViewController {
         return deleteButton
     }()
     
+    private lazy var shareButton: UIBarButtonItem = {
+        let shareButton = UIBarButtonItem(barButtonSystemItem: .action,
+                                          target: self,
+                                          action: #selector(shareButtonPressed))
+        return shareButton
+    }()
+    
     private let infoLabelNoPhotosYet: UILabel = {
         let label = UILabel()
         label.text = "You didn't add photos yet"
@@ -68,7 +75,7 @@ class FavouritesViewController: UICollectionViewController {
                                   alpha: 1)
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: label)
-        navigationItem.rightBarButtonItem = deleteButton
+        navigationItem.rightBarButtonItems = [deleteButton, shareButton]
     }
     
     private func setupLabel() {
@@ -83,10 +90,59 @@ class FavouritesViewController: UICollectionViewController {
         deleteButton.isEnabled = numberOfPhotosSelected > 0
     }
     
+    private func refresh() {
+        
+        updateNavButtonsState()
+        self.selectedPhotos.removeAll()
+        self.collectionView.selectItem(at: nil, animated: true, scrollPosition: [])
+    }
+    
+    private func showAlert() {
+        
+        let alert = UIAlertController(title: "",
+                                      message: "\(selectedPhotos.count) photos will be deleted from favourites", preferredStyle: .alert)
+        let deleteAction = UIAlertAction(title: "Delete",
+                                         style: .default) { (action) in
+            self.deleteItems()
+            self.refresh()
+        }
+        let cancelAction = UIAlertAction(title: "Cancel",
+                                         style: .cancel) { (action) in
+        }
+        alert.addAction(deleteAction)
+        alert.addAction(cancelAction)
+        present(alert, animated: true)
+    }
+    
+    private func deleteItems() {
+        
+        if let selectedCells = collectionView.indexPathsForSelectedItems {
+            let items = selectedCells.map {$0.item}.sorted().reversed()
+            for item in items {
+                photos.remove(at: item)
+            }
+            collectionView.deleteItems(at: selectedCells)
+        }
+    }
+    
     //MARK: - Button methods
     
     @objc private func deleteButtonPressed() {
-        // some code soon
+        showAlert()
+    }
+    
+    @objc private func shareButtonPressed(_ sender: UIBarButtonItem) {
+        
+        let shareController = UIActivityViewController(activityItems: selectedPhotos,
+                                                       applicationActivities: nil)
+        shareController.completionWithItemsHandler = { _, bool, _, _ in
+            if bool {
+                self.refresh()
+            }
+        }
+        shareController.popoverPresentationController?.barButtonItem = sender
+        shareController.popoverPresentationController?.permittedArrowDirections = .any
+        present(shareController, animated: true, completion: nil)
     }
 }
 
