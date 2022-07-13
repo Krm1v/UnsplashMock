@@ -1,41 +1,49 @@
 {
   "images" : [
     {
+      "filename" : "IconSmall-20@2x.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "20x20"
     },
     {
+      "filename" : "IconSmall-20@3x.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "20x20"
     },
     {
+      "filename" : "IconSmall@2x.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "29x29"
     },
     {
+      "filename" : "IconSmall@3x.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "29x29"
     },
     {
+      "filename" : "IconSmall-40@2x.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "40x40"
     },
     {
+      "filename" : "IconSmall-40@3x.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "40x40"
     },
     {
+      "filename" : "Icon@2x.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "60x60"
     },
     {
+      "filename" : "Icon@3x.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "60x60"
@@ -86,6 +94,7 @@
       "size" : "83.5x83.5"
     },
     {
+      "filename" : "Дизайн без названия-2.png",
       "idiom" : "ios-marketing",
       "scale" : "1x",
       "size" : "1024x1024"
