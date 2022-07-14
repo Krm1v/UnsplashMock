@@ -88,6 +88,7 @@ class FavouritesViewController: UICollectionViewController {
     private func updateNavButtonsState() {
         
         deleteButton.isEnabled = numberOfPhotosSelected > 0
+        shareButton.isEnabled = numberOfPhotosSelected > 0
     }
     
     private func refresh() {

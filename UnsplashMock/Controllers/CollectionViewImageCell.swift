@@ -13,13 +13,25 @@ class CollectionViewImageCell: UICollectionViewCell {
     static let reuseID = "PhotosCell"
     
     private let checkmark: UIImageView = {
-
+        
         let image = UIImage(named: "checkmark2")
         let imageView = UIImageView(image: image)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.alpha = 0
-
+        
         return imageView
+    }()
+    
+    let likesLabel: UILabel = {
+        
+        let likesLabel = UILabel()
+        likesLabel.font = UIFont.systemFont(ofSize: 15, weight: .bold)
+        likesLabel.textColor = .white
+        likesLabel.textAlignment = .center
+        likesLabel.numberOfLines = 1
+        likesLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        return likesLabel
     }()
     
     var unsplashPhoto: UnsplashPhoto! {
@@ -50,6 +62,7 @@ class CollectionViewImageCell: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         photoImageView.image = nil
+        likesLabel.text = nil
     }
     
     private func updateSelectedState() {
@@ -76,12 +89,20 @@ class CollectionViewImageCell: UICollectionViewCell {
         photoImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
     }
     
+    private func setupLikesLabel() {
+        
+        addSubview(likesLabel)
+        likesLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8).isActive = true
+        likesLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -8).isActive = true
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         updateSelectedState()
         setupPhotoImageView()
         setupCheckMark()
+        setupLikesLabel()
     }
     
     required init?(coder: NSCoder) {

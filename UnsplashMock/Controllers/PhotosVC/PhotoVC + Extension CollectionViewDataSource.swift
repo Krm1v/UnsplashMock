@@ -21,7 +21,7 @@ extension PhotosCollectionViewController {
                                                       for: indexPath) as! CollectionViewImageCell
         let unsplashedPhotos = photos[indexPath.item]
         cell.unsplashPhoto = unsplashedPhotos
-        
+        cell.likesLabel.text = "❤️\(unsplashedPhotos.likes)"
         return cell
     }
 }

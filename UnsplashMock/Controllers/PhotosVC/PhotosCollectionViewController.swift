@@ -49,7 +49,6 @@ class PhotosCollectionViewController: UICollectionViewController {
         setupSearchBar()
         updateNavButtonsState()
         loadImages()
-        
     }
     
     //MARK: - Setup UI
@@ -139,7 +138,7 @@ class PhotosCollectionViewController: UICollectionViewController {
             let tabBar = self.tabBarController as! TabBarController
             let navVC = tabBar.viewControllers?[1] as! UINavigationController
             let favVC = navVC.topViewController as! FavouritesViewController
-
+            
             favVC.photos.append(contentsOf: selectedPhotos ?? [])
             favVC.collectionView.reloadData()
             self.refresh()
@@ -150,7 +149,7 @@ class PhotosCollectionViewController: UICollectionViewController {
         alert.addAction(addAction)
         alert.addAction(cancelAction)
         present(alert, animated: true)
-        }
+    }
     
     @objc private func actionButtonPressed(_ sender: UIBarButtonItem) {
         

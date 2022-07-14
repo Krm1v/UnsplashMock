@@ -18,6 +18,7 @@ struct UnsplashPhoto: Codable {
     let width: Int
     let height: Int
     let urls: [URLVersion.RawValue:String]
+    let likes: Int
     
     enum URLVersion: String {
         case raw
